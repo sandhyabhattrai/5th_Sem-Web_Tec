@@ -1,0 +1,75 @@
+<!-- Q4: String Analysis -->
+<html>
+
+<head>
+<title>Web Assignment Q4</title>
+</head>
+
+<body>
+
+<h3>Enter a String:</h3>
+<input type="text" id="string"><br><br>
+
+<button onclick="enter()">Analyze</button>
+
+<p id="result1"></p>
+<p id="result2"></p>
+
+<script>
+
+function enter(){
+
+let str=document.getElementById("string").value;
+
+let vowels=0;
+let consonants=0;
+let spaces=0;
+
+let acount=0,ecount=0,icount=0,ocount=0,ucount=0;
+
+for(let i=0;i<str.length;i++){
+
+let ch=str[i];
+
+if("AEIOUaeiou".includes(ch)){
+
+vowels++;
+
+ch=ch.toLowerCase();
+
+if(ch=="a") acount++;
+else if(ch=="e") ecount++;
+else if(ch=="i") icount++;
+else if(ch=="o") ocount++;
+else if(ch=="u") ucount++;
+
+}
+
+else if(ch==" "){
+spaces++;
+}
+
+else{
+consonants++;
+}
+
+}
+
+document.getElementById("result1").innerHTML=
+"No. of Vowels: "+vowels+
+"<br>No. of Consonants: "+consonants+
+"<br>No. of Spaces: "+spaces;
+
+document.getElementById("result2").innerHTML=
+"Occurrence of a = "+acount+
+"<br>Occurrence of e = "+ecount+
+"<br>Occurrence of i = "+icount+
+"<br>Occurrence of o = "+ocount+
+"<br>Occurrence of u = "+ucount;
+
+}
+
+</script>
+
+</body>
+</html>

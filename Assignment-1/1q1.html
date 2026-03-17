@@ -1,0 +1,90 @@
+<!-- Q1: Largest, Smallest and Prime Numbers -->
+ 
+<html>
+<head>
+    <title>Web Assignment Q1</title>
+</head>
+
+<body>
+
+<script>
+
+function getnumbers() {
+    return [
+        parseInt(document.getElementById("t1").value),
+        parseInt(document.getElementById("t2").value),
+        parseInt(document.getElementById("t3").value),
+        parseInt(document.getElementById("t4").value),
+        parseInt(document.getElementById("t5").value)
+    ];
+}
+
+function checklargest() {
+    let numbers = getnumbers();
+    let largest = numbers[0];
+
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > largest) {
+            largest = numbers[i];
+        }
+    }
+
+    document.getElementById("results").innerHTML = "Largest: " + largest;
+}
+
+function checksmallest() {
+    let numbers = getnumbers();
+    let smallest = numbers[0];
+
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < smallest) {
+            smallest = numbers[i];
+        }
+    }
+
+    document.getElementById("results").innerHTML = "Smallest: " + smallest;
+}
+
+function printprime() {
+    let numbers = getnumbers();
+    let primes = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+
+        let num = numbers[i];
+        let isPrime = true;
+
+        if (num <= 1) isPrime = false;
+
+        for (let j = 2; j < num; j++) {
+            if (num % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) primes.push(num);
+    }
+
+    document.getElementById("results").innerHTML =
+        "Prime numbers: " + primes.join(", ");
+}
+
+</script>
+
+<h2>Enter 5 Numbers</h2>
+
+Num1: <input type="text" id="t1"><br>
+Num2: <input type="text" id="t2"><br>
+Num3: <input type="text" id="t3"><br>
+Num4: <input type="text" id="t4"><br>
+Num5: <input type="text" id="t5"><br><br>
+
+<button onclick="checklargest()">Largest</button>
+<button onclick="checksmallest()">Smallest</button>
+<button onclick="printprime()">Prime</button>
+
+<h3 id="results">Results</h3>
+
+</body>
+</html>

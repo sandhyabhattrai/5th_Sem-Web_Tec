@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    text-decoration: none;
+    font-size: 26px;
+    font-family: sans-serif;
+    color: antiquewhite;
+
+}
+ul{
+    list-style: none;
+
+}
+li{
+    display: inline;
+    margin-right: 24px;
+    padding: 10px;
+}
+nav{
+    background-color: limegreen;
+    height: 40px;
+padding: 10px;
+}
+
+a:hover{
+   background-color: black;
+   font-size: 30px;
+}
+
+b{
+    background-color: beige;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 26px;
+    text-align: center;
+    margin: 20px;
+}
+
+div{
+    padding: 30px;
+}
+

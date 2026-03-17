@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Assignment-2 by Smaran</title>
+  </head>
+
+<body>
+<h2>Employee Entry</h2>
+Name: <input type="text" id="name"><br><br>
+Address: <input type="text" id="address"><br><br>
+Email: <input type="text" id="email"><br><br>
+Phone: <input type="text" id="phone"><br><br>
+Qualification: <input type="text" id="qual"><br><br>
+Citizenship No: <input type="text" id="cit"><br><br>
+PAN No: <input type="text" id="pan"><br><br>
+<button onclick="addEmployee()">Submit</button>
+<p id="result"></p>
+<script>
+function Person(name,address,email,phone,qualification,citizenship,pan){
+    this.name = name;
+    this.address = address;
+    this.email = email;
+    this.phone = phone;
+    this.qualification = qualification;
+    this.citizenship = citizenship;
+    this.pan = pan;
+}
+
+function addEmployee(){
+    let name = document.getElementById("name").value;
+    let address = document.getElementById("address").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let qual = document.getElementById("qual").value;
+    let cit = document.getElementById("cit").value;
+    let pan = document.getElementById("pan").value;
+    let employee = new Person(name,address,email,phone,qual,cit,pan);
+    let resultDiv = document.getElementById("result");
+    let color;
+    if(employee.address.toLowerCase() === "bharatpur"){
+        color = "green";
+        resultDiv.innerHTML =
+        "Name: "+employee.name+"<br>"+
+        "Address: "+employee.address+"<br>"+
+        "Email: "+employee.email+"<br>"+
+        "Phone: "+employee.phone+"<br>"+
+        "Qualification: "+employee.qualification+"<br>"+
+        "Citizenship No: "+employee.citizenship+"<br>"+
+        "PAN No: "+employee.pan;
+    } else {
+        color = "red";
+        resultDiv.innerHTML = "Employee is not from Bharatpur";
+    }
+    resultDiv.style.color = color; 
+}
+</script>
+</body>
+</html>

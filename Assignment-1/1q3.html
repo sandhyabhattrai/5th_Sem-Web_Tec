@@ -1,0 +1,68 @@
+<!-- Q3: Employee Entry -->
+<html>
+
+<head>
+<title>Web Assignment Q3</title>
+</head>
+
+<body style="background-color:#181a19; color:white;">
+
+<h2>Employee Entry</h2>
+
+Employee Name: <input type="text" id="name"><br><br>
+Address: <input type="text" id="add"><br><br>
+Phone No: <input type="text" id="phone"><br><br>
+Position (CEO/CTO/Manager/Cashier/Labour): 
+<input type="text" id="pos"><br><br>
+
+<button onclick="addEmployee()">Add Employee</button>
+
+<h3 id="result"></h3>
+
+<script>
+
+function addEmployee(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let position=document.getElementById("pos").value;
+
+let displayArea=document.getElementById("result");
+
+let pos=position.toLowerCase();
+
+let output="";
+
+if(pos==="ceo" || pos==="cto"){
+    output="<span style='color:green;'>Name: "+name+
+    "<br>Phone: "+phone+"<br>Position: "+position+"</span>";
+}
+
+else if(pos==="manager"){
+    output="<span style='color:yellow;'>Name: "+name+
+    "<br>Phone: "+phone+"<br>Position: Manager</span>";
+}
+
+else if(pos==="cashier"){
+    output="<span style='color:blue;'>Name: "+name+
+    "<br>Phone: "+phone+"<br>Position: Cashier</span>";
+}
+
+else if(pos==="labour"){
+    output="<span style='color:red;'>Name: "+name+
+    "<br>Phone: "+phone+"<br>Position: Labour</span>";
+}
+
+else{
+    output="Name: "+name+"<br>Phone: "+phone+
+    "<br>Position: "+position;
+}
+
+displayArea.innerHTML=output;
+
+}
+
+</script>
+
+</body>
+</html>

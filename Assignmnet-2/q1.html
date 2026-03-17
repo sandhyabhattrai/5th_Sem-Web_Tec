@@ -1,0 +1,47 @@
+<html>
+ <head>
+    <title>Assignment-2 by Smaran</title>
+  </head>   
+
+<body>
+<h2>Person Information</h2>
+<div id="result"></div>
+<script>
+function Person(name,address,email,phone,qualification,citizenship,pan){
+this.name = name;
+this.address = address;
+this.email = email;
+this.phone = phone;
+this.qualification = qualification;
+this.citizenship = citizenship;
+this.pan = pan;
+}
+
+let p1 = new Person("Prakash","Damak","prakash.tamang@gmail.com","9812345678","BSc CSIT","45612","PAN101");
+let p2 = new Person("Bishal","Tansen","bishal.rai@gmail.com","9845612378","BBA","78451","PAN102");
+let p3 = new Person("Kamal","Gorkha","kamal.gurung@gmail.com","9865231478","BCA","22341","PAN103");
+let p4 = new Person("Nabin","Banepa","nabin.shrestha@gmail.com","9823456178","BIM","66512","PAN104");
+let p5 = new Person("Sandesh","Ilam","sandesh.limbu@gmail.com","9854321765","BSc","91234","PAN105");
+let p6 = new Person("Dipesh","Bardibas","dipesh.karki@gmail.com","9803456712","BHM","32145","PAN106");
+let p7 = new Person("Sagar","Dhangadhi","sagar.bohora@gmail.com","9814567890","BBS","55672","PAN107");
+let p8 = new Person("Ramesh","Lamjung","ramesh.thapa@gmail.com","9846753210","BCA","77890","PAN108");
+let p9 = new Person("Manoj","Birtamod","manoj.bhandari@gmail.com","9867452319","BIT","88765","PAN109");
+let p10 = new Person("Sujan","Baglung","sujan.paudel@gmail.com","9809876543","MBS","99321","PAN110");
+
+let persons = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10];
+let output = "";
+
+for(let p of persons){
+output += 
+"Name: "+p.name+"<br>"+
+"Address: "+p.address+"<br>"+
+"Email: "+p.email+"<br>"+
+"Phone: "+p.phone+"<br>"+
+"Qualification: "+p.qualification+"<br>"+
+"Citizenship No: "+p.citizenship+"<br>"+
+"PAN No: "+p.pan+"<br><br>";
+}
+document.getElementById("result").innerHTML = output;
+</script>
+</body>
+</html>

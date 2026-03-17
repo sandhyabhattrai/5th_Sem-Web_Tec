@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Assignment-2 by Smaran</title>
+    </head>
+
+<body>
+<h2>IT Officer Entry</h2>
+Name: <input type="text" id="name"><br><br>
+Address: <input type="text" id="address"><br><br>
+Email: <input type="text" id="email"><br><br>
+Phone: <input type="text" id="phone"><br><br>
+Qualification: <input type="text" id="qual"><br><br>
+Citizenship No: <input type="text" id="cit"><br><br>
+PAN No: <input type="text" id="pan"><br><br>
+Master Skill: <input type="text" id="skill"><br><br>
+<button onclick="addITOfficer()">Submit</button>
+<p id="result"></p>
+<script>
+function Person(name,address,email,phone,qualification,citizenship,pan){
+    this.name = name;
+    this.address = address;
+    this.email = email;
+    this.phone = phone;
+    this.qualification = qualification;
+    this.citizenship = citizenship;
+    this.pan = pan;
+}
+function IT_Officer(name,address,email,phone,qualification,citizenship,pan,skill){
+    Person.call(this,name,address,email,phone,qualification,citizenship,pan); // inherit Person
+    this.MasterSkill = skill; 
+}
+function addITOfficer(){
+    let name = document.getElementById("name").value;
+    let address = document.getElementById("address").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let qual = document.getElementById("qual").value;
+    let cit = document.getElementById("cit").value;
+    let pan = document.getElementById("pan").value;
+    let skill = document.getElementById("skill").value;
+    let officer = new IT_Officer(name,address,email,phone,qual,cit,pan,skill);
+    let resultDiv = document.getElementById("result");
+
+    if(officer.address.toLowerCase() === "bnp-10" && officer.MasterSkill.toLowerCase() === "python"){
+        resultDiv.innerHTML =
+        "Name: " + officer.name + "<br>" +
+        "Address: " + officer.address + "<br>" +
+        "Email: " + officer.email + "<br>" +
+        "Phone: " + officer.phone + "<br>" +
+        "Qualification: " + officer.qualification + "<br>" +
+        "Citizenship No: " + officer.citizenship + "<br>" +
+        "PAN No: " + officer.pan + "<br>" +
+        "Master Skill: " + officer.MasterSkill;
+        resultDiv.style.color = "green";
+    } else {
+        resultDiv.innerHTML = "IT Officer does not meet the criteria";
+        resultDiv.style.color = "red";
+    }
+}
+</script>
+</body>
+</html>

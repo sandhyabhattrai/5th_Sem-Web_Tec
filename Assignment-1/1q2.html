@@ -1,0 +1,50 @@
+<!-- Q2: Student Verification -->
+<html>
+
+<head>
+<title>Web Assignment Q2</title>
+</head>
+
+<body>
+
+Name: <input type="text" id="name"><br>
+Age: <input type="text" id="age"><br>
+Address: <input type="text" id="add"><br>
+Phone No: <input type="text" id="phone"><br>
+Email: <input type="text" id="email"><br><br>
+
+<button onclick="verify()">Done</button>
+
+<p id="result"></p>
+
+<script>
+
+function verify(){
+
+let name = document.getElementById("name").value;
+let age = document.getElementById("age").value;
+let add = document.getElementById("add").value;
+let phone = document.getElementById("phone").value;
+let email = document.getElementById("email").value;
+
+if(add=="bharatpur-10" && email=="test@bmc.tu.edu.np"){
+
+    if(age>=18 && age<=30){
+
+        document.getElementById("result").innerHTML =
+        "Name: "+name+"<br>Age: "+age+"<br>Address: "+add+
+        "<br>Email: "+email+"<br>Phone: "+phone;
+
+    }
+}
+
+else{
+    document.getElementById("result").innerHTML="No Data Found";
+}
+
+}
+
+</script>
+
+</body>
+</html>
