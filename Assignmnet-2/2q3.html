@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment-2 by Smaran</title>
+</head>
+<body>
+<h2>IT Officer Entry</h2>
+<div>
+    Name: <input type="text" id="name"><br>
+    Address: <input type="text" id="address"><br>
+    Email: <input type="text" id="email"><br>
+    Phone: <input type="text" id="phone"><br>
+    Qualification: <input type="text" id="qual"><br>
+    Citizenship No: <input type="text" id="cit"><br>
+    PAN No: <input type="text" id="pan"><br>
+    Master Skill: <input type="text" id="skill"><br><br>
+    <button id="submitBtn">Submit</button>
+</div>
+<p id="result"></p>
+
+<script>
+function Person(name,address,email,phone,qualification,citizenship,pan){
+    this.name = name;
+    this.address = address;
+    this.email = email;
+    this.phone = phone;
+    this.qualification = qualification;
+    this.citizenship = citizenship;
+    this.pan = pan;
+}
+
+function IT_Officer(name,address,email,phone,qualification,citizenship,pan,skill){
+    Person.call(this,name,address,email,phone,qualification,citizenship,pan);
+    this.masterSkill = skill;
+}
+IT_Officer.prototype = Object.create(Person.prototype);
+IT_Officer.prototype.constructor = IT_Officer;
+
+document.getElementById("submitBtn").addEventListener("click", function(){
+    let name = document.getElementById("name").value;
+    let address = document.getElementById("address").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let qual = document.getElementById("qual").value;
+    let cit = document.getElementById("cit").value;
+    let pan = document.getElementById("pan").value;
+    let skill = document.getElementById("skill").value;
+
+    let officer = new IT_Officer(name,address,email,phone,qual,cit,pan,skill);
+    let resultDiv = document.getElementById("result");
+
+    if(officer.address.toLowerCase() === "bnp-10" && officer.masterSkill.toLowerCase() === "python"){
+        resultDiv.innerHTML =
+        `Name: ${officer.name}<br>
+        Address: ${officer.address}<br>
+        Email: ${officer.email}<br>
+        Phone: ${officer.phone}<br>
+        Qualification: ${officer.qualification}<br>
+        Citizenship No: ${officer.citizenship}<br>
+        PAN No: ${officer.pan}<br>
+        Master Skill: ${officer.masterSkill}`;
+        resultDiv.style.color = "green";
+    } else {
+        resultDiv.innerHTML = "IT Officer does not meet the criteria";
+        resultDiv.style.color = "red";
+    }
+});
+</script>
+</body>
+</html>
