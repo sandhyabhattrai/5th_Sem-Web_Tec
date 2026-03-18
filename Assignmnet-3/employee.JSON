@@ -1,0 +1,24 @@
+{
+  "employee": [
+    {"name":"Anish Devkota","address":"Pokhara","email":"anish.devkota@yahoo.com","salary":53500,"pan":"201"},
+    {"name":"Kriti Shrestha","address":"Lalitpur","email":"kriti.shrestha@gmail.com","salary":46800,"pan":"202"},
+    {"name":"Sujan Tamang","address":"Biratnagar","email":"sujan.tamang@outlook.com","salary":49200,"pan":"203"},
+    {"name":"Priya Karmacharya","address":"bharatpur","email":"priya.karma@gmail.com","salary":44500,"pan":"204"},
+    {"name":"Bibek Pandey","address":"Hetauda","email":"bibek.pandey@gmail.com","salary":57000,"pan":"205"},
+    {"name":"Samjhana Rai","address":"Dharan","email":"samjhana.rai@yahoo.com","salary":41500,"pan":"206"},
+    {"name":"Dipendra Bhattarai","address":"Butwal","email":"dipendra.bh@gmail.com","salary":52800,"pan":"207"},
+    {"name":"Rojina Maharjan","address":"Kirtipur","email":"rojina.mhj@gmail.com","salary":47300,"pan":"208"},
+    {"name":"Sagar Upreti","address":"Nepalgunj","email":"sagar.upreti@outlook.com","salary":50100,"pan":"209"},
+    {"name":"Asmita Malla","address":"Gorkha","email":"asmita.malla@gmail.com","salary":43700,"pan":"210"},
+    {"name":"Nirajan Khatri","address":"Itahari","email":"nirajan.khatri@gmail.com","salary":55400,"pan":"211"},
+    {"name":"Sushmita Ghimire","address":"Damak","email":"sushmita.gh@yahoo.com","salary":48600,"pan":"212"},
+    {"name":"Prabesh Dahal","address":"Birtamod","email":"prabesh.dahal@gmail.com","salary":39800,"pan":"213"},
+    {"name":"Kabita Chaudhary","address":"Tulsipur","email":"kabita.ch@gmail.com","salary":42100,"pan":"214"},
+    {"name":"Rabin Limbu","address":"Ilam","email":"rabin.limbu@outlook.com","salary":45900,"pan":"215"},
+    {"name":"Elina Joshi","address":"Tansen","email":"elina.joshi@gmail.com","salary":51200,"pan":"216"},
+    {"name":"Sandesh Panta","address":"Baglung","email":"sandesh.panta@gmail.com","salary":46400,"pan":"217"},
+    {"name":"Barsha Subedi","address":"Sindhuli","email":"barsha.subedi@yahoo.com","salary":40700,"pan":"218"},
+    {"name":"Naresh Bista","address":"Dhangadhi","email":"naresh.bista@gmail.com","salary":58000,"pan":"219"},
+    {"name":"Menuka Hamal","address":"Lamjung","email":"menuka.hamal@gmail.com","salary":44200,"pan":"220"}
+  ]
+}
